@@ -61,12 +61,15 @@
                                     <constraint firstAttribute="height" constant="65" id="uYE-vx-bdR"/>
                                 </constraints>
                             </view>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="EJ6-YF-vsc">
+                            <searchBar contentMode="redraw" placeholder="Search Pokemon" translatesAutoresizingMaskIntoConstraints="NO" id="EJ6-YF-vsc">
                                 <rect key="frame" x="0.0" y="65" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="geK-4f-z0x"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="PcX-Xl-aUe"/>
+                                </connections>
                             </searchBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="GRN-Gg-y86">
                                 <rect key="frame" x="0.0" y="109" width="375" height="558"/>
@@ -153,11 +156,12 @@
                     <connections>
                         <outlet property="btnPlay" destination="irh-am-ecv" id="rfs-y9-9bH"/>
                         <outlet property="collectionView" destination="xQ7-Ln-CuP" id="xaI-py-eIt"/>
+                        <outlet property="searchBar" destination="EJ6-YF-vsc" id="YBb-VD-05B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-164" y="116.49175412293854"/>
+            <point key="canvasLocation" x="-682" y="35"/>
         </scene>
     </scenes>
     <resources>
