@@ -10,9 +10,25 @@ import UIKit
 
 class PokemonDetailViewController: UIViewController {
 
+	@IBOutlet weak var lblHeight: UILabel!
+	@IBOutlet weak var imgMain: UIImageView!
+	@IBOutlet weak var lblAttack: UILabel!
+
+	@IBOutlet weak var lblEvo: UILabel!
+	@IBOutlet weak var lblWeight: UILabel!
+	@IBOutlet weak var lblPokeDexId: UILabel!
+	@IBOutlet weak var lblDefense: UILabel!
+	@IBOutlet weak var lblType: UILabel!
+	@IBOutlet weak var lblDescreiption: UILabel!
+	@IBOutlet weak var lblTitle: UILabel!
+	@IBOutlet weak var btnBack: UIButton!
+	@IBOutlet weak var lblName: UILabel!
+	var pokemon: Pokemon!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+
+      // lblName.text = pokemon.name
         // Do any additional setup after loading the view.
     }
 
@@ -21,15 +37,5 @@ class PokemonDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

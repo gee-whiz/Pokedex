@@ -94,13 +94,37 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 			 cell.configureCell(item)
 		}else{
 			item = pokemon[indexPath.row]
+			 cell.configureCell(item)
 		}
 
 
 		return cell
 	}
 
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
+		if segue.identifier == "ShowPokeDetail" {
+			if let vc = segue.destination as?  PokemonDetailViewController {
+				if let item = sender as? Pokemon {
+					vc.pokemon = item
+				}
+			}
+		}
+
+	}
+
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		let item: Pokemon!
+		if isInSearchMode {
+			item = filteredPokemon[indexPath.row]
+		}else{
+			item = pokemon[indexPath.row]
+		}
+
+
+		performSegue(withIdentifier: "ShowPokeDetail", sender: item)
+
+	}
 
 
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
